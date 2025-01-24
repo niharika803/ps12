@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function arrayToSubArray(array){
+            let final=[],sum=0
+            for(i=0;i<array.length;i++){
+               for(j=0;j<array[i].length;j++){
+                let isThere=false
+                for(k=0;k<final.length;k++){
+                    if(final[k]==array[i][j]){
+                    isThere=true
+                    break;
+
+                }
+               }
+               if(!isThere){
+                final.push(array[i][j])
+                sum=sum+array[i][j]
+               }
+            }
+            }
+            console.log(final)
+            return  sum
+        }
+        array=[[1],[2],[1,2],[2,3],[4,5]]
+        console.log(arrayToSubArray(array))
+    </script>
+</body>
+</html>
